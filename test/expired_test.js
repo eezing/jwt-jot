@@ -1,7 +1,6 @@
 
 import { expect } from 'chai'
 import jwt_simple from 'jwt-simple'
-
 import JwtJot from '../src/index'
 
 describe('expired method', function() {

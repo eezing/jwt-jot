@@ -14,10 +14,10 @@
     "url": "git+https://github.com/eezing/jwt-jot-client.git"
   },
   "keywords": [
-    "\"jwt",
+    "jwt",
     "token",
     "jot",
-    "auth\""
+    "auth"
   ],
   "author": "Eric Zingeler",
   "license": "ISC",
