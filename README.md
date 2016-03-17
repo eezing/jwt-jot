@@ -1,2 +1,3 @@
-# jwt-jot-client
+# jwt-jot
+
 A javascript JWT helper
