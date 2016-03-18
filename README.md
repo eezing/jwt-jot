@@ -23,7 +23,7 @@ expired method:
 
 ```javascript
 
-let jot.expired() // --> returns bool
+jot.expired() // --> returns bool
 
 ```
 
@@ -33,6 +33,6 @@ getClaim method:
 
 // if token decoded = { role: 'admin', company: 'foo' ... }
 
-let jot.getClaim('role') // --> returns 'admin'
+let role = jot.getClaim('role') // --> returns 'admin'
 
 ```
