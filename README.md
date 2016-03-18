@@ -2,6 +2,7 @@
 
 A javascript JWT helper
 
+[![Build Status](https://travis-ci.org/eezing/jwt-jot.svg?branch=master)](https://travis-ci.org/eezing/jwt-jot)
 ---
 
 ### The Gist
