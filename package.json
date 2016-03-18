@@ -1,6 +1,6 @@
 {
   "name": "jwt-jot",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "A javascript JWT helper",
   "main": "lib/index.js",
   "scripts": {
