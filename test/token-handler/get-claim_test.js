@@ -1,8 +1,8 @@
 import { expect } from 'chai'
 import jwt_simple from 'jwt-simple'
-import JwtJot from '../src/index'
+import JwtJot from '../../src/token-handler'
 
-describe('getClaim method', function() {
+describe('token-handler - getClaim method', function() {
 
     it('Should return valve of payload property at given key name - value is of type string', function() {
 

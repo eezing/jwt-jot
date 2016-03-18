@@ -1,9 +1,9 @@
 
 import { expect } from 'chai'
 import jwt_simple from 'jwt-simple'
-import JwtJot from '../src/index'
+import JwtJot from '../../src/token-handler'
 
-describe('expired method', function() {
+describe('token-handler - expired method', function() {
 
     it('Should return true if given an expired token', function() {
 

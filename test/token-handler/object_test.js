@@ -1,9 +1,9 @@
 
 import { expect } from 'chai'
 import jwt_simple from 'jwt-simple'
-import JwtJot from '../src/index'
+import JwtJot from '../../src/token-handler'
 
-describe('handler object', function() {
+describe('token-handler - object instance', function() {
 
     it('Should return an instance if given a valid token', function() {
 
