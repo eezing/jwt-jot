@@ -32,7 +32,7 @@ describe('browser - getToken method', function() {
             var payload = { role: 'admin', exp: Math.round(new Date().getTime()/1000) + 36000 }
             var token = jwt_simple.encode(payload, 'xxx')
             var key = 'id_token'
-            localStorage.set(key, token)
+            localStorage.setItem(key, token)
             var Subject = new Browser(key)
 
             // action -> result

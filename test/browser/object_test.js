@@ -2,12 +2,12 @@
 import { expect } from 'chai'
 import jwt_simple from 'jwt-simple'
 import { Browser } from '../../src'
-
+import LocalStorage_mock from '../mocks/local-storage'
 
 describe('browser - object instance', function() {
 
-    before(function() {
-        global.localStorage = { get: function() {}, set: function() {}}
+    beforeEach(function() {
+        global.localStorage = new LocalStorage_mock()
     })
 
     it('Should throw an Error if given no arguments', function() {

@@ -48,3 +48,11 @@ jot.valid() // --> bool
 jot.getToken() // --> JWT or undefined
 
 ```
+
+#### Instance method - eject()
+
+```javascript
+
+jot.eject() // removes token from localStorage
+
+```

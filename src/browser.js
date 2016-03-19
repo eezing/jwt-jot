@@ -25,9 +25,9 @@ export default function(key, token) {
 }
 
 function setStoredToken(key, token) {
-    localStorage.set(key, token)
+    localStorage.setItem(key, token)
 }
 
 function getStoredToken(key) {
-    return localStorage.get(key)
+    return localStorage.getItem(key)
 }

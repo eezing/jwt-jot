@@ -32,7 +32,7 @@ describe('browser - valid method', function() {
             it('Should return true', function() {
 
                 // setup
-                localStorage.set(key, token)
+                localStorage.setItem(key, token)
                 var Subject = new Browser(key)
 
                 // action -> result
@@ -68,7 +68,7 @@ describe('browser - valid method', function() {
             it('Should return false', function() {
 
                 // setup
-                localStorage.set(key, token)
+                localStorage.setItem(key, token)
                 var Subject = new Browser(key)
 
                 // action -> result

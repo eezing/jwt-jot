@@ -3,11 +3,15 @@ export default function() {
 
     this.store = {}
 
-    this.set = function(key, value) {
+    this.setItem = function(key, value) {
         this.store[key] = value
     }
 
-    this.get = function(key) {
+    this.getItem = function(key) {
         return this.store[key]
+    }
+
+    this.removeItem = function(key) {
+        this.store[key] = undefined
     }
 }
