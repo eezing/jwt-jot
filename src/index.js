@@ -1,4 +1,4 @@
 
-import handler from './token-handler'
+import browser from './browser'
 
-export default handler
+export const Browser = browser
