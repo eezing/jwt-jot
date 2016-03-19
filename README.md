@@ -1,38 +1,50 @@
 # jwt-jot
 
-A javascript JWT helper
+A simple javascript JWT helper Object
+
+- For browsers: Integrated with localStorage for easy persisted token management
 
 [![Build Status](https://travis-ci.org/eezing/jwt-jot.svg?branch=master)](https://travis-ci.org/eezing/jwt-jot)
 ---
 
-### The Gist
 
-Import & create a new instance of jwt-jot:
+## Browser Object
 
+
+#### Import library
 ```javascript
 
-import JwtJot from 'jwt-jot'
-
-let token = localStorage.get('id_token') // <-- your jwt from somewhere
-
-let jot = new JwtJot(token)
+import { Browser as JotBrowser } from 'jwt-jot'
 
 ```
 
-expired method:
+#### Create new instance
 
 ```javascript
 
-jot.expired() // --> returns bool
+let key = 'id_token'
+let token = myJWTFromSomewhere()
+
+// Option 1: with <key, token> arguments
+let jot = new JotBrowser(key, token)
+
+// Option 2: with <key> argument - gets token from localStorage if exists
+let jot = new JotBrowser(key)
 
 ```
 
-getClaim method:
+#### Instance method - valid()
 
 ```javascript
 
-// if token decoded = { role: 'admin', company: 'foo' ... }
+jot.valid() // --> bool
 
-let role = jot.getClaim('role') // --> returns 'admin'
+```
+
+#### Instance method - getToken()
+
+```javascript
+
+jot.getToken() // --> JWT or undefined
 
 ```
