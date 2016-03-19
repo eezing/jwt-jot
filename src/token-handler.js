@@ -3,16 +3,20 @@ import jwt_decode from 'jwt-decode'
 
 export default function(token) {
 
-    this.decoded = jwt_decode(token)
-    this.expired = expired
-    this.getClaim = getClaim
+    this.token = token
+    
+    this.decoded = jwt_decode(this.token)
 
-    function expired() {
+    this.expired = function() {
         let now = Math.round(new Date().getTime()/1000)
         return now >= this.decoded.exp
     }
 
-    function getClaim(key) {
+    this.getClaim = function(key) {
         return this.decoded[key]
+    }
+
+    this.getToken = function() {
+        return this.token
     }
 }
