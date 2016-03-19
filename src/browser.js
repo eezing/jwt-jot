@@ -12,7 +12,7 @@ export default function(key, token) {
         tokenHandler = new TokenHandler(token)
     } else {
         let saved_token = getStoredToken(key)
-        tokenHandler = saved_token ? new TokenHandler(saved_token) : undefined
+        tokenHandler = saved_token ? new TokenHandler(saved_token) : null
     }
 
     this.valid = function() {
@@ -20,7 +20,11 @@ export default function(key, token) {
     }
 
     this.getToken = function() {
-        return tokenHandler ? tokenHandler.getToken() : undefined
+        return tokenHandler ? tokenHandler.getToken() : null
+    }
+
+    this.eject = function() {
+        removeStoredToken(key)
     }
 }
 
@@ -30,4 +34,8 @@ function setStoredToken(key, token) {
 
 function getStoredToken(key) {
     return localStorage.getItem(key)
+}
+
+function removeStoredToken(key) {
+    localStorage.removeItem(key)
 }

@@ -12,6 +12,6 @@ export default function() {
     }
 
     this.removeItem = function(key) {
-        this.store[key] = undefined
+        this.store[key] = null
     }
 }

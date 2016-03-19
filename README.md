@@ -45,7 +45,7 @@ jot.valid() // --> bool
 
 ```javascript
 
-jot.getToken() // --> JWT or undefined
+jot.getToken() // --> JWT or null
 
 ```
 
