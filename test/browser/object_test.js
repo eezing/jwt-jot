@@ -3,11 +3,13 @@ import { expect } from 'chai'
 import jwt_simple from 'jwt-simple'
 import Browser from '../../src/browser'
 
+
 describe('browser - object instance', function() {
 
     it('Should throw an Error if given no arguments', function() {
 
         // setup
+        global.localStorage = { get: function() { return undefined }}
         var Subject = Browser
 
         // action
