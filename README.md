@@ -25,10 +25,16 @@ import { Browser as JotBrowser } from 'jwt-jot'
 let key = 'id_token'
 let token = myJWTFromSomewhere()
 
-// Option 1: with <key, token> arguments
+
+// * Option 1: with <key, token> arguments
+// Will save token to window.localStorage at specified key
+
 let jot = new JotBrowser(key, token)
 
-// Option 2: with <key> argument - gets token from localStorage if exists
+
+// * Option 2: with <key> argument
+// Will get token from localStorage if it exists
+
 let jot = new JotBrowser(key)
 
 ```
