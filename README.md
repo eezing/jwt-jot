@@ -43,7 +43,9 @@ jot.valid() // --> bool
 #### Instance method - getClaim()
 
 ```javascript
-jot.getClaim(<claim key>) // --> token payload[<claim key>] or undefined
+let claimKey = 'role' // <-- specify property name in token payload
+
+jot.getClaim(claimKey) // --> token payload['role'] or undefined
 ```
 
 #### Instance method - getToken()
