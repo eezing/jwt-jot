@@ -28,7 +28,7 @@ describe('token-handler - getClaim method', function() {
         expect(result).to.eql(payload.obj)
     })
 
-    it('Should return undefined if given key is not a propery in payload', function() {
+    it('Should return undefined if given key is not a property in payload', function() {
 
         // setup
         var payload = { role: 'admin', obj: { foo: 'bar' }, exp: Math.round(new Date().getTime()/1000) + 3600 }

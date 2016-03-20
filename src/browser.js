@@ -20,7 +20,11 @@ export default function(key, token) {
     }
 
     this.getToken = function() {
-        return tokenHandler ? tokenHandler.getToken() : null
+        return tokenHandler ? tokenHandler.getToken() : undefined
+    }
+
+    this.getClaim = function(name) {
+        return tokenHandler ? tokenHandler.getClaim(name) : undefined
     }
 
     this.eject = function() {

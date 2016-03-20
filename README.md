@@ -47,6 +47,14 @@ jot.valid() // --> bool
 
 ```
 
+#### Instance method - getClaim()
+
+```javascript
+
+jot.getClaim() // --> payload claim or undefined
+
+```
+
 #### Instance method - getToken()
 
 ```javascript
