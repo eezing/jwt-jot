@@ -50,7 +50,7 @@ describe('browser - getToken method', function() {
 
             // action -> result
             var result = Subject.getToken()
-            expect(result).to.be.null
+            expect(result).to.be.undefined
         })
     })
 })

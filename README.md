@@ -39,6 +39,7 @@ let jot = new JotBrowser(key)
 
 ```
 
+
 #### Instance method - valid()
 
 ```javascript
@@ -47,6 +48,18 @@ jot.valid() // --> bool
 
 ```
 
+
+#### Instance method - getClaim()
+
+```javascript
+
+let claimKey = 'role' // <-- specify property name in token payload
+
+jot.getClaim(claimKey) // --> token payload['role'] or undefined
+
+```
+
+
 #### Instance method - getToken()
 
 ```javascript
@@ -54,6 +67,7 @@ jot.valid() // --> bool
 jot.getToken() // --> JWT or null
 
 ```
+
 
 #### Instance method - eject()
 
