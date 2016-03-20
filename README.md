@@ -4,24 +4,20 @@ A simple javascript JWT helper Object
 
 - For browsers: Integrated with localStorage for easy persisted token management
 
-[![Build Status](https://travis-ci.org/eezing/jwt-jot.svg?branch=master)](https://travis-ci.org/eezing/jwt-jot)
+[![Build Status](https://travis-ci.org/eezing/jwt-jot.svg?branch=master)](https://travis-ci.org/eezing/jwt-jot) [![npm version](https://badge.fury.io/js/jwt-jot.svg)](https://badge.fury.io/js/jwt-jot)
 ---
-
 
 ## Browser Object
 
-
 #### Import library
+
 ```javascript
-
 import { Browser as JotBrowser } from 'jwt-jot'
-
 ```
 
 #### Create new instance
 
 ```javascript
-
 let key = 'id_token'
 let token = myJWTFromSomewhere()
 
@@ -36,43 +32,30 @@ let jot = new JotBrowser(key, token)
 // Will get token from localStorage if it exists
 
 let jot = new JotBrowser(key)
-
 ```
-
 
 #### Instance method - valid()
 
 ```javascript
-
 jot.valid() // --> bool
-
 ```
-
 
 #### Instance method - getClaim()
 
 ```javascript
-
 let claimKey = 'role' // <-- specify property name in token payload
 
 jot.getClaim(claimKey) // --> token payload['role'] or undefined
-
 ```
-
 
 #### Instance method - getToken()
 
 ```javascript
-
 jot.getToken() // --> JWT or null
-
 ```
-
 
 #### Instance method - eject()
 
 ```javascript
-
 jot.eject() // removes token from localStorage
-
 ```

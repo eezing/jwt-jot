@@ -1,13 +1,14 @@
 {
   "name": "jwt-jot",
-  "version": "1.2.0",
+  "version": "1.2.2",
   "description": "A javascript JWT helper",
   "main": "lib/index.js",
   "scripts": {
     "build:lib": "./node_modules/.bin/babel src -d lib",
     "test": "npm run test:mocha",
     "test:mocha": "mocha --require babel-register --recursive",
-    "test:watch": "npm run test:mocha -- --watch"
+    "test:watch": "npm run test:mocha -- --watch",
+    "postinstall": "npm run build:lib"
   },
   "repository": {
     "type": "git",
